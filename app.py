@@ -11,9 +11,11 @@ from openai_service import FUNCTIONS, execute_function_call
 from collections import defaultdict
 
 # Load environment variables
+
+
 load_dotenv()  # Load from current directory
 load_dotenv('../.env')  # Also try to load from parent directory (root)
-
+api_key = os.getenv('OPENAI_API_KE')
 app = Flask(__name__)
 CORS(app)  # Allow all origins for local development
 
